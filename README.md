@@ -11,23 +11,23 @@ All end points can be tried by Postman
 #### User Registration 
 	POST http://127.0.0.1:8000/users/register/
 	Request body:
-	`{
+	{
 		"username" 	: "",
 		"email" 	: "",
 		"email2" 	: "",
 		"password" 	: "",
 		"first_name": "",
 		"last_name" : ""
-	}`
+	}
 
 #### Login and Authentication
 	POST http://127.0.0.1:8000/users/login/
 	POST http://127.0.0.1:8000/user/auth/token/
 	Request body:
-	`{
+	{
 		"username" : "",
 		"password" : ""
-	}`
+	}
 
 
 ### Blog Post API
@@ -35,11 +35,11 @@ All end points can be tried by Postman
 	POST http://127.0.0.1:8000/blog/create/
 	headers : Authorization : JWT <token obtained for that user>
 	Request body: 
-	`{
+	{
 		"blogTitle"		: "",
 		"blogContent"	: "",
 		"bloggedDate"	: "",
-	}`
+	}
 
 #### List
 	GET http://127.0.0.1:8000/blog/
@@ -48,11 +48,11 @@ All end points can be tried by Postman
 	PUT http://127.0.0.1:8000/blog/<blogid>/edit/
 	headers : Authorization : JWT <token obtained for that user>
 	Request body:
-	`{
+	{
 		"blogTitle": "",
 		"blogContent": "",
 		"bloggedDate": "",
-	}`
+	}
 
 #### Delete 
 	DELETE http://127.0.0.1:8000/blog/4/delete/
