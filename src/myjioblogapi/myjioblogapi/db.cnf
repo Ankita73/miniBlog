@@ -1,0 +1,5 @@
+[client]
+database = myjioblog
+user = jioblog
+password = jioblog
+default-character-set = utf8

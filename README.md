@@ -57,13 +57,21 @@ All end points can be tried by Postman
 #### Delete 
 	DELETE http://127.0.0.1:8000/blog/4/delete/
 
-
 ### Comments API
-#### Create 
+#### Create
 	POST http://127.0.0.1:8000/comments/create/?type=blog&blogId=<blogId>
+	headers : Authorization : JWT <token obtained for that user>
+	Request body:
+	{
+		"content":"",
+	}
+	
 #### Reply to a comment:
 	POST http://127.0.0.1:8000/comments/create/?type=blog&blogId=<blogId>&parent_obj=<commentid>
+	headers : Authorization : JWT <token obtained for that user>
 #### Get a Comment
 	GET http://127.0.0.1:8000/comments/<commentId>/
+	headers : Authorization : JWT <token obtained for that user>
 #### Delete a Comment
 	DELETE http://127.0.0.1:8000/comments/<commentId>/
+	headers : Authorization : JWT <token obtained for that user>
